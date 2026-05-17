@@ -13,9 +13,10 @@ public static class GetCommandsTool
         RhinoDoc doc,
         [Description("Substring filter (case-insensitive). Strongly recommended — unfiltered results can exceed 1000 commands.")] string? filter = null)
     {
+        var needle = filter?.TrimStart('_', '-');
         string[] all = Command.GetCommandNames(true, false)
-            .Where(n => string.IsNullOrEmpty(filter)
-                     || n.Contains(filter, StringComparison.OrdinalIgnoreCase))
+            .Where(n => string.IsNullOrEmpty(needle)
+                     || n.Contains(needle, StringComparison.OrdinalIgnoreCase))
             .OrderBy(n => n, StringComparer.OrdinalIgnoreCase)
             .ToArray();
 

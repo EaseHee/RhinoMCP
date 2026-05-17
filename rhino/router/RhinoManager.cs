@@ -51,8 +51,16 @@ public class RhinoManager(
         string resolved = version ?? config.DefaultVersion;
         string slotId = DefaultSlotPrefix + resolved;
 
-        var adopted = store.ListReady().FirstOrDefault(c => c.Adopted && c.Version == resolved);
+        var ready = store.ListReady().Where(c => c.Version == resolved).ToList();
+
+        var adopted = ready.FirstOrDefault(c => c.Adopted);
         if (adopted is not null) return adopted;
+
+        var existingDefault = ready.FirstOrDefault(c => c.SlotId == slotId);
+        if (existingDefault is not null) return existingDefault;
+
+        var existingOther = ready.OrderBy(c => c.SlotId, StringComparer.Ordinal).FirstOrDefault();
+        if (existingOther is not null) return existingOther;
 
         return await SpawnInternalAsync(resolved, slotId, ct).ConfigureAwait(false);
     }
