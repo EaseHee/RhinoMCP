@@ -1,0 +1,40 @@
+using System.Text.Json;
+using NUnit.Framework;
+using RhMcp.Integration.Tests.Harness;
+
+namespace RhMcp.Integration.Tests;
+
+// list_slots is the router's window into its own slot registry. With an
+// isolated state dir and no user-started Rhino announcement to adopt, the
+// router should report an empty list. Tests in this fixture do NOT spawn a
+// Rhino — slot-population behaviour lives in SpawnSlotTests,
+// GrasshopperStartTests, MultiRouterTests.
+[TestFixture]
+public sealed class ListSlotsTests
+{
+    private RhinoMcpRouter _router = null!;
+
+    [OneTimeSetUp]
+    public async Task SetUp()
+    {
+        _router = await RhinoMcpRouter.LaunchIsolatedAsync();
+    }
+
+    [OneTimeTearDown]
+    public async Task TearDown()
+    {
+        if (_router is not null)
+        {
+            await _router.DisposeAsync();
+        }
+    }
+
+    [Test]
+    public async Task list_slots_is_empty_for_freshly_spawned_router()
+    {
+        string json = await _router.CallToolTextAsync("list_slots");
+        JsonElement root = JsonAssert.Parse(json);
+        Assert.That(root.ValueKind, Is.EqualTo(JsonValueKind.Array));
+        Assert.That(root.GetArrayLength(), Is.EqualTo(0));
+    }
+}

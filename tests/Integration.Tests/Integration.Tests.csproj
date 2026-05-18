@@ -8,6 +8,10 @@
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
     <RootNamespace>RhMcp.Integration.Tests</RootNamespace>
+    <!-- NUnit1032 fires on IAsyncDisposable fields disposed in [OneTimeTearDown];
+         the analyzer only recognises per-test [TearDown], which is wrong for
+         fixture-scoped resources like the rhino router subprocess. -->
+    <NoWarn>$(NoWarn);NUnit1032</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +20,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageReference Include="NUnit.Analyzers" Version="4.4.0" />
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="ModelContextProtocol" Version="1.3.0" />
   </ItemGroup>
 
   <ItemGroup>

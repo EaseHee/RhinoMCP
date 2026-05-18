@@ -1,0 +1,86 @@
+using System.Text.Json;
+using NUnit.Framework;
+using RhMcp.Integration.Tests.Harness;
+
+namespace RhMcp.Integration.Tests;
+
+// Exercises the "many tools / many routers share the same slot" behaviour:
+// repeated tool calls (from one router, or from several isolated routers)
+// should not leave duplicate slot entries behind. Marked [Explicit] because
+// it spawns real Rhinos.
+[TestFixture]
+[Explicit("Spawns a real Rhino; opt in with --filter \"Category=RequiresRhino\".")]
+[Category("RequiresRhino")]
+public sealed class MultiRouterTests
+{
+    private RhinoMcpRouter _router = null!;
+    private RhinoMcpRouter? _router2;
+    private RhinoMcpRouter? _router3;
+
+    [OneTimeSetUp]
+    public async Task SetUp()
+    {
+        _router = await RhinoMcpRouter.LaunchIsolatedAsync();
+    }
+
+    [OneTimeTearDown]
+    public async Task TearDown()
+    {
+        // Dispose every router we spun up; the original fixture leaked
+        // _router_2 / _router_3 by never calling DisposeAsync on them.
+        foreach (RhinoMcpRouter? router in new[] { _router, _router2, _router3 })
+        {
+            if (router is null) continue;
+            try { await router.DisposeAsync(); } catch { /* best effort */ }
+        }
+    }
+
+    [TestCase("8")]
+    [TestCase("WIP")]
+    public async Task repeated_tool_calls_from_one_router_share_a_single_slot(string version)
+    {
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", version } });
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", version } });
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", version } });
+
+        string json = await _router.CallToolTextAsync("list_slots");
+        JsonElement root = JsonAssert.Parse(json);
+        Assert.That(root.ValueKind, Is.EqualTo(JsonValueKind.Array));
+        Assert.That(root.GetArrayLength(), Is.EqualTo(1));
+    }
+
+    // TODO : Each isolated router currently shares an adopted slot via the
+    // announcement directory. Decide whether that's the intended contract;
+    // if every router should get its own ID, this test will need to change.
+    [TestCase("8")]
+    [TestCase("WIP")]
+    public async Task tool_calls_across_isolated_routers_share_a_single_slot(string version)
+    {
+        _router2 = await RhinoMcpRouter.LaunchIsolatedAsync();
+        _router3 = await RhinoMcpRouter.LaunchIsolatedAsync();
+
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", version } });
+        // TODO : 2nd call locks up — investigate before re-enabling.
+        _ = await _router2.CallToolTextAsync("list_objects", new() { { "version", version } });
+        _ = await _router3.CallToolTextAsync("list_objects", new() { { "version", version } });
+
+        string json = await _router.CallToolTextAsync("list_slots");
+        JsonElement root = JsonAssert.Parse(json);
+        Assert.That(root.ValueKind, Is.EqualTo(JsonValueKind.Array));
+        Assert.That(root.GetArrayLength(), Is.EqualTo(1));
+    }
+
+    // Calling list_objects for two different versions in the same router
+    // should produce two slot entries, not collapse onto one.
+    [Test]
+    public async Task list_objects_across_two_versions_produces_two_slots()
+    {
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", "8" } });
+        _ = await _router.CallToolTextAsync("list_objects", new() { { "version", "WIP" } });
+
+        string json = await _router.CallToolTextAsync("list_slots");
+        JsonElement root = JsonAssert.Parse(json);
+        Assert.That(root.ValueKind, Is.EqualTo(JsonValueKind.Array));
+        Assert.That(root.GetArrayLength(), Is.EqualTo(2));
+    }
+}

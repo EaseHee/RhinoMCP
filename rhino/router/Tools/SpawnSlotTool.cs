@@ -43,7 +43,7 @@ public class SpawnSlotTool(RhinoManager manager, RhinoCrashReportFinder crashFin
             var notFound = new CloseSlotResult(
                 Closed: false,
                 Error: "slot_not_found",
-                Message: $"No slot named '{slot}'. Call list_slots to see what's running.");
+                Message: $"No slot named ({slot}). Call list_slots to see what is running.");
             return JsonSerializer.Serialize(notFound, RouterJsonContext.Default.CloseSlotResult);
         }
 
