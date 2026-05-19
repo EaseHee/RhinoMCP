@@ -12,7 +12,7 @@ keywords:
   - self-hosted
 ---
 
-// TODO : Suggest https://lmstudio.ai/models/qwen3
+![Local LLM](/local-llm.png)
 
 [LM Studio](https://lmstudio.ai) is a desktop app for running open-weight
 models on your own machine. It speaks MCP, so once you point it at the
@@ -20,37 +20,33 @@ Rhino server a local model can drive Rhino the same way a hosted one can.
 
 If you're choosing between assistants and aren't sure, start with [Claude
 Desktop](../connector); it's the gentler entry point. Pick LM Studio
-when you'd rather keep everything on your own hardware.
+when you'd rather keep everything on your own hardware or have data and privacy concerns.
+
+{{< callout type="warning" >}}
+Local open-weight models are not as capable as the paid hosted models
+(Claude, GPT, etc.). Expect more retries, weaker reasoning on long
+chains of tool calls, and the occasional refusal to use tools at all.
+{{< /callout >}}
 
 ## Before you start
 
 1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See
    [Getting Started](../getting-started) if you haven't done that yet.
 2. **LM Studio** is installed, and you've downloaded a model with strong
-   tool-use support. Larger instruction-tuned models (e.g. Qwen, Llama,
-   Mistral variants in the 14B+ range) tend to drive MCP tools more
-   reliably than small models.
+   tool-use support. A good starting point is
+   [Qwen3](https://lmstudio.ai/models/qwen3), which drives MCP tools
+   reliably. Plan on **16 GB of RAM** as a minimum.
+3. **Crank up the context length.** LM Studio defaults to a small
+   context window, which the Rhino tool list alone will blow through.
+   Open the model's load settings and push the max context length as
+   high as your machine will allow.
 
 ## Wire up the Rhino server
 
-1. In Rhino, run the `RhinoMCPConnect` command. It prints the command
-   LM Studio needs to launch the Rhino MCP router.
+1. In Rhino, run the `RhinoMCPConnect` command, choose the mcp.json tab. It gives the JSON needed for LM Studio to connect to the Rhino MCP.
 2. In LM Studio, open the **Program** sidebar and click **Install &gt;
    Edit mcp.json** (or open `~/.lmstudio/mcp.json` directly).
-3. Add an entry for the Rhino server, pasting the command and args from
-   step 1:
-
-   ```json
-   {
-     "mcpServers": {
-       "rhino": {
-         "command": "rhino-mcp-router",
-         "args": ["--default-version", "8"]
-       }
-     }
-   }
-   ```
-
+3. Add an entry for the Rhino server, pasting the mcp.json tab
 4. Save the file. LM Studio picks up the change without a restart; the
    `rhino` server should appear in the MCP tool list for any new chat.
 
