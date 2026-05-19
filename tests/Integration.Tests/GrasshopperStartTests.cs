@@ -6,7 +6,7 @@ namespace RhMcp.Integration.Tests;
 // Exercises g1_start / g2_start: starting Grasshopper inside a spawned Rhino
 // should produce its own slot entry alongside the parent Rhino slot.
 [TestFixture]
-public sealed class GrasshopperStartTests : SharedRouterFixture
+public sealed class GrasshopperStartTests : RouterFixture
 {
 
     [Test]
