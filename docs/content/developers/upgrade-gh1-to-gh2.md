@@ -36,7 +36,7 @@ enough on its own.
 ## A prompt to start with
 
 {{< prompt >}}
-Add a GH2 port of this plugin alongside the existing GH1 code. The GH1
+Add a GH2 port of this plugin in a folder called `gh2/` in this repo. The GH1
 project must build untouched.
 
 Use McNeel's official template, not hand-rolled scaffolding:
@@ -65,7 +65,7 @@ Port one component at a time. For each:
      identifiable for future upgrade tooling.
   2. Build (.rhp output).
   3. Validate via rhino-mcp:
-       - spawn two slots, one Rhino 8 (GH1), one Rhino WIP (GH2)
+       - spawn one Rhino WIP
        - place the GH1 component on the GH1 canvas
        - place the GH2 component on the GH2 canvas
        - feed both the same fixture: minimal, deterministic, picked
@@ -86,10 +86,9 @@ Port one component at a time. For each:
        - Mismatch in structure or count = hard fail. Per-element
          drift within tolerance = warn-only.
 
-Constraints:
+### Constraints:
   - Don't modify any file under the GH1 source folder.
-  - If anything is unclear before you start (input fixtures, tolerance,
-    which helpers count as "pure RhinoCommon") — ask. Don't infer.
+  - If anything is unclear before you start, ask. Don't infer.
 {{< /prompt >}}
 
 ## What to review
