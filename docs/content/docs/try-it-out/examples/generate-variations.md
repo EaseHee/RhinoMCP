@@ -2,30 +2,32 @@
 title: Generate variations
 weight: 20
 author: Callum
+editor: SteveF
 keywords:
   - variations
   - parametric sweep
-  - randomise
+  - randomize
   - grid
 ---
 
-Sweep across parameters (size, position, colour, count) without
+Sweep across parameters (size, position, color, count) without
 building each variant by hand.
 
 ## Try this prompt
 
 {{< prompt >}}
-Create 30 columns in a grid, randomise their heights between 2m and 6m,
-and colour them by height (short = pale, tall = dark).
+Create 30 columns in a grid, randomize their heights between 2m and 6m,
+and color them by height (short = pale, tall = dark).
 {{< /prompt >}}
 
 ## What you should see
 
 A 30-column grid materialises in the viewport. Each column is the right
 height and tinted to match. Ask follow-ups to refine: "space them 1.5m
-apart", "use a 5&times;6 grid", "weight the heights toward the centre".
+apart", "use a 5&times;6 grid", "weight the heights toward the center".
 
 ## More like this
 
-See the [Modelling](../../recipes#modelling) section of the recipes for
-more variation prompts.
+<blockquote class="page-note">
+See the <a href="../../recipes#modeling">Modeling</a> section of the recipes for more variation prompts.
+</blockquote>

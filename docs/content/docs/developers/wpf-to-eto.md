@@ -1,8 +1,10 @@
 ---
 title: Convert a WPF UI to Eto
 linkTitle: WPF to Eto
-weight: 5
+weight: 6
+next: docs/troubleshooting
 author: Callum
+editor: SteveF
 keywords:
   - WPF
   - Eto.Forms
@@ -21,7 +23,7 @@ renders.
 
 ## What you need
 
-- **Claude Code** with the [Rhino MCP plugin](../docs/cc-plugin) installed.
+- **Claude Code** with the [Rhino MCP plugin](../getting-started/cc-plugin) installed.
 - **Rhino** open with Rhino MCP running. If you can run it on both Windows
   and Mac, even better. The whole point of the port is the Mac side.
 - Your plugin's source checked out locally, with Claude Code started in

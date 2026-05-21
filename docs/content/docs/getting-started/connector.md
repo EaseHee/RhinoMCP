@@ -1,10 +1,12 @@
 ---
 title: Claude Desktop
+icon: claude
 weight: 2
 prev: docs/getting-started
 next: docs/try-it-out
 toc: false
 author: Callum
+editor: SteveF
 keywords:
   - Claude Desktop
   - connector
@@ -31,7 +33,7 @@ That's it. The connector is now wired up.
 
 > The desktop connector can also install the plugin for you if you ask it to.
 
-Paste the following into your AI agent, it will install it for you, there is no need to open Rhino.
+Paste the following into your AI agent. It will install it for you, so there is no need to open Rhino.
 
 {{< prompt >}}
 Install the `Rhino-MCP-Platform` plugin into Rhino using Yak (Rhino's package manager). `$1` is the Rhino major version to target (e.g. `8`). If omitted, default to `8`.
@@ -51,5 +53,6 @@ To upgrade an existing install, run `yak update Rhino-MCP-Platform`. To remove i
 
 ## Try it out
 
-Open Claude Desktop, start a new chat, and follow the prompts on the
-[Try it out](../try-it-out) page.
+<blockquote class="page-note">
+Open Claude Desktop, start a new chat, and follow the prompts on the <a href="../../try-it-out">Try It Out</a> page.
+</blockquote>

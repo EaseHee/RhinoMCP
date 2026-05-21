@@ -29,5 +29,6 @@ slider, change values, and watch it update live in Rhino.
 
 ## More like this
 
-See the [Grasshopper](../../recipes#grasshopper) section of the recipes
-for more definitions to try.
+<blockquote class="page-note">
+See the <a href="../../recipes#grasshopper">Grasshopper</a> section of the recipes for more definitions to try.
+</blockquote>

@@ -1,7 +1,10 @@
 ---
 title: Recipes
-weight: 10
+weight: 1
+prev: docs/try-it-out
+next: docs/try-it-out/examples
 author: Callum
+editor: SteveF
 keywords:
   - recipes
   - prompts
@@ -18,7 +21,7 @@ don't have to get the prompt right on the first try.
 > (Claude Desktop, Claude Code, Cursor). If you haven't set one up yet,
 > start with [Getting Started](../getting-started).
 
-## Modelling
+## Modeling
 
 ### Parametric furniture
 
@@ -39,7 +42,7 @@ Each tread is a 30mm-thick wedge in oak. Add a central column in steel.
 
 {{< prompt >}}
 Scatter 200 spheres of varying radius (between 10 and 80mm) across a
-5&times;5m region. Colour them by radius from blue (small) to red
+5&times;5m region. Color them by radius from blue (small) to red
 (large). No overlaps.
 {{< /prompt >}}
 
@@ -122,7 +125,7 @@ changes, but don't apply them until I say so.
 
 {{< prompt >}}
 This canvas is a mess. Tidy it up: align components into a left-to-right
-flow, group related logic with coloured groups and short scribbled
+flow, group related logic with colored groups and short scribbled
 labels, straighten out crossed wires (insert relays where needed), and
 hide any wires that are purely structural. Don't change what the
 definition does, just make it readable.
@@ -138,11 +141,11 @@ layers with no geometry, and group related layers under sensible
 parents.
 {{< /prompt >}}
 
-### Standardise materials
+### Standardize materials
 
 {{< prompt >}}
 Look at every object's material. Where multiple objects share the same
-colour, consolidate them onto a single named material.
+color, consolidate them onto a single named material.
 {{< /prompt >}}
 
 ### Find the duplicates
@@ -172,5 +175,6 @@ the document and tell me what probably went wrong.
 
 ---
 
-Got a good prompt? [Send us a PR](https://github.com/mcneel/RhinoMCP/edit/main/docs/content/docs/recipes.md)
-and we'll add it here.
+<blockquote class="page-note">
+Got a good prompt? <a href="https://github.com/mcneel/RhinoMCP/edit/main/docs/content/docs/try-it-out/recipes.md">Send us a PR</a> and we'll add it here.
+</blockquote>

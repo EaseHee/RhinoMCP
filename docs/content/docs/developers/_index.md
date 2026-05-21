@@ -1,8 +1,12 @@
 ---
 title: Developers
 linkTitle: Developers
-weight: 2
+icon: code
+weight: 30
+prev: docs
+next: docs/developers/upgrade-to-netcore
 author: Callum
+editor: SteveF
 keywords:
   - developers
   - plugin development
@@ -10,7 +14,7 @@ keywords:
   - AI assistant
 ---
 
-These pages are about incorporating the Rhino MCP and an AI assistant, like Claude Code into your development cycle for rapid development.
+These pages are about incorporating the Rhino MCP and an AI assistant like Claude Code into your development cycle for rapid development.
 
 These pages are **not** tutorials on how to do the conversion by hand. The goal is to put an assistant in the driver's seat and review what it does.
 
@@ -23,5 +27,6 @@ These pages are **not** tutorials on how to do the conversion by hand. The goal 
   {{< card link="wpf-to-eto" title="Convert a WPF UI to Eto" subtitle="Port a Windows-only WPF UI to Eto.Forms so the plugin runs on Mac too." >}}
 {{< /cards >}}
 
-If you're here to hack on **Rhino MCP itself**, see the
-[contributing notes on GitHub](https://github.com/mcneel/RhinoMCP#building--debugging).
+<blockquote class="page-note">
+If you're here to hack on <strong>Rhino MCP itself</strong>, see the <a href="https://github.com/mcneel/RhinoMCP#building--debugging">contributing notes on GitHub</a>.
+</blockquote>

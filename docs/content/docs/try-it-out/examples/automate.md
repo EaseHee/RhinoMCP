@@ -1,7 +1,9 @@
 ---
 title: Automate the boring bits
 weight: 60
+next: docs/advanced
 author: Callum
+editor: SteveF
 keywords:
   - automation
   - cleanup
@@ -26,5 +28,6 @@ and leaves the document in a tidier state. Undo is one step.
 
 ## More like this
 
-See the [Cleanup](../../recipes#cleanup) section of the recipes for more
-chores to delegate.
+<blockquote class="page-note">
+See the <a href="../../recipes#cleanup">Cleanup</a> section of the recipes for more chores to delegate.
+</blockquote>

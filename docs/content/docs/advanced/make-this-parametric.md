@@ -3,6 +3,7 @@ title: Make this parametric
 linkTitle: Make this parametric
 weight: 3
 author: Callum
+editor: SteveF
 keywords:
   - parametric
   - Grasshopper
@@ -10,7 +11,7 @@ keywords:
   - GH2
 ---
 
-You've modelled something by hand (a stair, a panelised facade, a
+You've modeled something by hand (a stair, a panelized facade, a
 piece of furniture) and now you wish you'd built it in
 Grasshopper from the start, because the client just asked for "the same
 thing but 200mm taller and with seven of them instead of five."
@@ -21,7 +22,7 @@ it as a GH2 graph that drives the same result from sliders.
 
 ## What you need
 
-- An MCP-connected assistant ([Claude Code](../docs/cc-plugin),
+- An MCP-connected assistant ([Claude Code](../getting-started/cc-plugin),
   Claude Desktop, or similar).
 - **Rhino 9** with Rhino MCP running, your hand-built model open, and a
   GH2 canvas available.
@@ -31,7 +32,7 @@ it as a GH2 graph that drives the same result from sliders.
 ## A prompt to start with
 
 {{< prompt >}}
-I've modelled this stair by hand. Look at the geometry on layer
+I've modeled this stair by hand. Look at the geometry on layer
 `Stair`, work out the construction recipe, and rebuild it as a GH2
 definition driven by sliders for tread depth, riser height, total
 rise, and number of treads. Reference my existing geometry in the
@@ -70,7 +71,7 @@ uniform, or does it follow a curve?" before committing to a topology.
 
 - **Ambiguous intent.** If your hand model has irregular spacing or
   one-off tweaks, the assistant can't tell whether those are
-  intentional features or sloppy modelling. Tell it explicitly which
+  intentional features or sloppy modeling. Tell it explicitly which
   variations are parametric and which were drift.
 - **Missing GH2 components.** If the recipe needs something GH2 doesn't
   have yet, ask for the gap to be called out rather than papered over

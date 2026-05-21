@@ -1,9 +1,11 @@
 ---
-title: Try it out
-weight: 5
-prev: docs/getting-started
-next: docs/recipes
+title: Try It Out
+icon: beaker
+weight: 7
+prev: docs
+next: docs/try-it-out/recipes
 author: Callum
+editor: SteveF
 keywords:
   - first prompt
   - demo
@@ -41,5 +43,6 @@ friend.
   tasks so the assistant doesn't get confused about which document you
   mean.
 
-When you're ready for more, head over to [Recipes](../recipes) for
-copy-pasteable prompts grouped by what you want to do.
+<blockquote class="page-note">
+When you're ready for more, head over to <a href="recipes">Recipes</a> for copy-pasteable prompts grouped by what you want to do.
+</blockquote>

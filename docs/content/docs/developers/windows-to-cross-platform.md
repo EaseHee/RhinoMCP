@@ -1,8 +1,9 @@
 ---
 title: Make a Windows-only plugin cross-platform
 linkTitle: Windows to cross-platform
-weight: 4
+weight: 5
 author: Callum
+editor: SteveF
 keywords:
   - cross-platform
   - Mac
@@ -19,7 +20,7 @@ the like. This page is about the non-UI half; for the UI half see
 
 ## What you need
 
-- **Claude Code** with the [Rhino MCP plugin](../docs/cc-plugin) installed.
+- **Claude Code** with the [Rhino MCP plugin](../getting-started/cc-plugin) installed.
 - **Rhino** open with Rhino MCP running, ideally on Mac so the assistant
   can actually exercise the cross-platform path. If you only have Windows
   handy, you can still do the port; you just won't catch
@@ -66,7 +67,7 @@ and the assistant can't close its loop.
 
 - **P/Invoke removals.** A `DllImport` into `user32` usually has a
   RhinoCommon or Eto equivalent; confirm the replacement has the same
-  behaviour, not just the same shape. Things like window activation,
+  behavior, not just the same shape. Things like window activation,
   cursor position, and clipboard access all have portable APIs but with
   slightly different semantics.
 - **Registry usage.** `Microsoft.Win32.Registry` is Windows-only.

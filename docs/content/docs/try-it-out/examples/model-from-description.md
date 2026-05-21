@@ -1,9 +1,11 @@
 ---
 title: Model from a description
 weight: 10
+prev: docs/try-it-out/examples
 author: Callum
+editor: SteveF
 keywords:
-  - modelling
+  - modeling
   - parametric
   - prompt example
 ---
@@ -28,5 +30,6 @@ legs outward".
 
 ## More like this
 
-See the [Modelling](../../recipes#modelling) section of the recipes for
-more starting points.
+<blockquote class="page-note">
+See the <a href="../../recipes#modeling">Modeling</a> section of the recipes for more starting points.
+</blockquote>

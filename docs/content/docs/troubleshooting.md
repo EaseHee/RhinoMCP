@@ -1,7 +1,10 @@
 ---
 title: Troubleshooting
+icon: question-mark-circle
 weight: 100
+prev: docs
 author: Callum
+editor: SteveF
 keywords:
   - troubleshooting
   - FAQ
@@ -37,7 +40,9 @@ My agent can't reach Rhino
 The connector notices when Rhino crashes and tells your assistant, so the
 assistant can offer to relaunch and retry.
 
-> If the same prompt keeps causing a crash ask Claude to help you file an issue on GitHub.
+<blockquote class="page-alert">
+If the same prompt keeps causing a crash, ask Claude or your LLM of choice to help you file an issue on GitHub.
+</blockquote>
 
 ## The assistant says it did something, but I don't see it
 
@@ -65,6 +70,9 @@ The router defaults to Rhino 8. To target Rhino 9:
 
 ## Anywhere else to ask?
 
-- [GitHub issues](https://github.com/mcneel/RhinoMCP/issues) for bugs or documentation errors.
-- [Rhino Discourse AI category](https://discourse.mcneel.com/c/rhino/artificial-intelligence-rhino/162)
-  for questions and ideas.
+<blockquote class="page-note">
+<ul>
+<li><a href="https://github.com/mcneel/RhinoMCP/issues">GitHub issues</a> for bugs or documentation errors.</li>
+<li><a href="https://discourse.mcneel.com/c/rhino/artificial-intelligence-rhino/162">Rhino Discourse AI category</a> for questions and ideas.</li>
+</ul>
+</blockquote>

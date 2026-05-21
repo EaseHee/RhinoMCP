@@ -2,7 +2,9 @@
 title: Upgrade a GH1 script to GH2
 linkTitle: Upgrade GH1 to GH2
 weight: 1
+prev: docs/advanced
 author: Callum
+editor: SteveF
 keywords:
   - Grasshopper
   - GH1 to GH2
@@ -22,7 +24,7 @@ here you're porting a `.gh` definition, not source code.
 
 ## What you need
 
-- An MCP-connected assistant ([Claude Code](../docs/cc-plugin),
+- An MCP-connected assistant ([Claude Code](../getting-started/cc-plugin),
   Claude Desktop, or similar).
 - **Rhino 9** with Rhino MCP running, the GH1 definition open, and a
   GH2 canvas available.

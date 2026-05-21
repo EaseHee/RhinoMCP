@@ -3,6 +3,7 @@ title: Plugin prototyping
 linkTitle: Plugin prototyping
 weight: 4
 author: Callum
+editor: SteveF
 keywords:
   - plugin prototyping
   - scaffolding
@@ -24,7 +25,7 @@ was worth pursuing.
 
 ## What you need
 
-- **Claude Code** with the [Rhino MCP plugin](../docs/cc-plugin)
+- **Claude Code** with the [Rhino MCP plugin](../getting-started/cc-plugin)
   installed.
 - **Rhino** open with Rhino MCP running, on the Rhino version you want
   to target.
@@ -94,7 +95,7 @@ Even for a throwaway prototype, glance at:
   assemblies; for tight iteration loops, use the plugin developer's
   reload flow (or just unload, rebuild, reload). The assistant should
   do this for you; if it skips the reload step, builds will land but
-  behaviour won't change.
+  behavior won't change.
 
 ## Related
 

@@ -3,6 +3,7 @@ title: Headless render farm
 linkTitle: Headless render farm
 weight: 2
 author: Callum
+editor: SteveF
 keywords:
   - headless
   - render farm
@@ -23,7 +24,7 @@ actually doing.
 
 ## What you need
 
-- An MCP-connected assistant ([Claude Code](../docs/cc-plugin),
+- An MCP-connected assistant ([Claude Code](../getting-started/cc-plugin),
   Claude Desktop, or similar).
 - **Rhino** running with Rhino MCP.
 - A `.3dm` (or several) you want to capture, or a recipe the assistant
@@ -85,7 +86,7 @@ Common failure modes:
 - **ActiveDoc confusion.** Remind it that each slot has its own document
   handle; `sc.doc` inside a `run_python` call may not be the slot you
   think. The
-  [doc-handle note](../docs/recipes) covers this.
+  [doc-handle note](../try-it-out/recipes) covers this.
 - **Memory pressure.** Spinning up many slots at once can chew RAM.
   Cap the parallelism ("do at most four at a time") rather
   than letting it fan out.

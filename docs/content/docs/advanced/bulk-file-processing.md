@@ -2,7 +2,9 @@
 title: Bulk file processing
 linkTitle: Bulk file processing
 weight: 5
+next: docs/developers
 author: Callum
+editor: SteveF
 keywords:
   - bulk processing
   - batch 3dm
@@ -25,7 +27,7 @@ were actually working on.
 
 ## What you need
 
-- An MCP-connected assistant ([Claude Code](../docs/cc-plugin),
+- An MCP-connected assistant ([Claude Code](../getting-started/cc-plugin),
   Claude Desktop, or similar).
 - **Rhino** running with Rhino MCP.
 - A folder of `.3dm` files you want to process, and write-access to
@@ -54,7 +56,7 @@ Variations worth trying:
 - **Audit and report**: "open each file, collect layer counts,
   object counts, units, and tolerance, write the results to
   `audit.csv`. Don't modify anything."
-- **Rename and reorganise**: "for each file, read the project code
+- **Rename and reorganize**: "for each file, read the project code
   from layer `Meta`, and re-save it as `<code>/<original-name>.3dm`."
 
 ## What you should see
@@ -77,7 +79,7 @@ than auditing fifty bad ones.
   tolerances are easy to get subtly wrong in a way that only shows up
   downstream.
 - **Skipped files.** If a file errors, did the assistant skip it and
-  carry on, or stop? Be explicit about which behaviour you want. For
+  carry on, or stop? Be explicit about which behavior you want. For
   destructive batches, "stop on first error" is usually safer.
 - **The save path.** Make the assistant echo the full output folder
   and a couple of example output filenames before it starts. Files
@@ -94,7 +96,7 @@ Common failure modes:
   inside a slot may not be talking to the slot you think. Tell the
   assistant to use the injected `__rhino_doc__` handle inside
   `run_python` / `run_csharp` calls. See the
-  [doc-handle note](../docs/recipes).
+  [doc-handle note](../try-it-out/recipes).
 - **Modal dialogs.** Some commands pop UI on certain files (missing
   fonts, missing linked blocks, unit mismatch on import). In a slot,
   these can hang the run. If it's stalling on one file, ask for the

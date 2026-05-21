@@ -28,5 +28,6 @@ empty".
 
 ## More like this
 
-See the [Inspection &amp; reporting](../../recipes#inspection--reporting)
-section of the recipes for more audit prompts.
+<blockquote class="page-note">
+See the <a href="../../recipes#inspection--reporting">Inspection &amp; reporting</a> section of the recipes for more audit prompts.
+</blockquote>

@@ -1,10 +1,12 @@
 ---
 title: Local LLMs
-weight: 5
+icon: lmstudio
+weight: 7
 prev: docs/getting-started
 next: docs/try-it-out
 toc: false
 author: Callum
+editor: SteveF
 keywords:
   - LM Studio
   - local LLM
@@ -31,7 +33,7 @@ chains of tool calls, and the occasional refusal to use tools at all.
 ## Before you start
 
 1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See
-   [Getting Started](../getting-started) if you haven't done that yet.
+   [Getting Started](../) if you haven't done that yet.
 2. **LM Studio** is installed, and you've downloaded a model with strong
    tool-use support. A good starting point is
    [Qwen3](https://lmstudio.ai/models/qwen3), which drives MCP tools
@@ -56,7 +58,7 @@ chains of tool calls, and the occasional refusal to use tools at all.
 ## Try it out
 
 Load your model in LM Studio, start a new chat with tool use enabled,
-and follow the prompts on the [Try it out](../try-it-out) page.
+and follow the prompts on the [Try it out](../../try-it-out) page.
 
 ## Tips
 

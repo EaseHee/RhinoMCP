@@ -12,14 +12,14 @@ keywords:
 
 ![Voxelizer GH1 component and its GH2 equivalent solving side by side](/developer/voxelizer-gh2-conversion.png)
 
-Rhino 9 ships Grasshopper 2 alongside Grasshopper If you have a GH 1 plugin and you want to try upgrading to GH2, this is a perfect use of an AI Agent and the RhinoMCP Server. The MCP exposes parallel `g1_*` and `g2_*` tool families, so the assistant can place a GH1 component and its
+Rhino 9 ships Grasshopper 2 alongside Grasshopper 1. If you have a GH1 plugin and you want to try upgrading to GH2, this is a perfect use of an AI agent and the Rhino MCP server. The MCP exposes parallel `g1_*` and `g2_*` tool families, so the assistant can place a GH1 component and its
 new GH2 counterpart on their respective canvases in the same session and compare what they solve to.
 
 We'll use [Voxelizer](https://github.com/ytakzk/Voxelizer) as the running example: a small, single-component GH1 plugin that's easy to follow end to end.
 
 ## What you need
 
-- **An AI Agent** with the [Rhino MCP plugin](/docs/getting-started) installed.
+- **An AI agent** with the [Rhino MCP plugin](/docs/getting-started) installed.
 - **Rhino 9** open with Rhino MCP running, and Grasshopper 2 available.
 - The Voxelizer source checked out locally, with your agent started in that repo.
 

@@ -28,5 +28,6 @@ Blend?", "why did that one fail?".
 
 ## More like this
 
-See the [Recipes](../../recipes) for prompts grouped by what you want to
-do.
+<blockquote class="page-note">
+See the <a href="../../recipes">Recipes</a> for prompts grouped by what you want to do.
+</blockquote>

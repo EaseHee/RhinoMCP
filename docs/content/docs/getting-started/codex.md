@@ -1,10 +1,12 @@
 ---
-title: Codex
-weight: 4
+title: OpenAI Codex
+icon: chatgpt
+weight: 5
 prev: docs/getting-started
 next: docs/try-it-out
 toc: false
 author: Callum
+editor: SteveF
 keywords:
   - Codex
   - OpenAI
@@ -13,8 +15,8 @@ keywords:
 ---
 
 [Codex](https://github.com/openai/codex) is OpenAI's terminal-based AI
-assistant. It speaks MCP, so once you point it at the Rhino server it can
-drive Rhino the same way Claude can.
+assistant. It speaks MCP, so once you point it at the Rhino MCP server, it can
+drive Rhino & Grasshopper the same way Claude can.
 
 If you're choosing between assistants and aren't sure, start with [Claude
 Desktop](../connector); it's the gentler entry point.
@@ -22,12 +24,12 @@ Desktop](../connector); it's the gentler entry point.
 ## Before you start
 
 1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See
-   [Getting Started](../getting-started) if you haven't done that yet.
+   [Getting Started](../) if you haven't done that yet.
 2. **Codex** is installed and signed in. See the
    [Codex install guide](https://github.com/openai/codex#installation)
    if you need it.
 
-## Wire up the Rhino server
+## Wire up the Rhino MCP server
 
 1. In Rhino, run the `RhinoMCPConnect` command. It prints the command
    Codex needs to launch the Rhino MCP router.
@@ -50,4 +52,4 @@ Desktop](../connector); it's the gentler entry point.
 ## Try it out
 
 Start a Codex session and follow the prompts on the
-[Try it out](../try-it-out) page.
+[Try it out](../../try-it-out) page.

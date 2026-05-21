@@ -1,10 +1,12 @@
 ---
 title: Claude Code
+icon: claude
 weight: 3
 prev: docs/getting-started
 next: docs/try-it-out
 toc: false
 author: Callum
+editor: SteveF
 keywords:
   - Claude Code
   - Anthropic
@@ -14,16 +16,16 @@ keywords:
 
 [Claude Code](https://claude.com/claude-code) is Anthropic's
 terminal-based AI assistant. The Rhino Claude Code plugin ships ready-made
-agents for modelling, drafting, Grasshopper, and more.
+agents for modeling, drafting, Grasshopper, and more.
 
 Claude Code is a great fit if you're comfortable in a terminal or already
 use it for code. If you're not sure, start with [Claude
-Desktop](../connector) it's much more friendly.
+Desktop](../connector). It's much more friendly.
 
 ## Before you start
 
 1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See
-   [Getting Started](../getting-started) if you haven't done that yet.
+   [Getting Started](../) if you haven't done that yet.
 2. **Claude Code** is installed and signed in. See the
    [Claude Code install guide](https://docs.claude.com/claude-code/quickstart)
    if you need it.
@@ -50,7 +52,7 @@ Quick actions you can fire off without writing a prompt.
 | --- | --- |
 | `/rhino-mcp:launch-rhino` | Start a Rhino instance for the session. |
 | `/rhino-mcp:launch-rhinos` | Start a few Rhino instances side by side. |
-| `/rhino-mcp:scene` | Summarise what's in the active document. |
+| `/rhino-mcp:scene` | Summarize what's in the active document. |
 | `/rhino-mcp:snapshot` | Capture the viewport and describe it. |
 | `/rhino-mcp:install-mcp` | Wire the Rhino server into the current project. |
 
@@ -73,7 +75,7 @@ explicitly (*"have the modeller build me a chair"*) or let Claude pick.
 ## Try it out
 
 Start a Claude Code session and follow the prompts on the
-[Try it out](../try-it-out) page.
+[Try it out](../../try-it-out) page.
 
 ## Try the agents
 

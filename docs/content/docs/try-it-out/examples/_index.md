@@ -1,8 +1,11 @@
 ---
 title: Examples
 linkTitle: Examples
-weight: 5
+weight: 2
+prev: docs/try-it-out/recipes
+next: docs/try-it-out/examples/model-from-description
 author: Callum
+editor: SteveF
 keywords:
   - examples
   - prompts

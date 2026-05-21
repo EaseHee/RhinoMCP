@@ -3,6 +3,7 @@ title: Upgrade to a newer Rhino
 linkTitle: Upgrade Rhino version
 weight: 2
 author: Callum
+editor: SteveF
 keywords:
   - Rhino upgrade
   - plugin
@@ -17,7 +18,7 @@ that, not about the changes themselves.
 
 ## What you need
 
-- **Claude Code** with the [Rhino MCP plugin](../docs/cc-plugin) installed.
+- **Claude Code** with the [Rhino MCP plugin](../getting-started/cc-plugin) installed.
 - **The target Rhino version** open with Rhino MCP running. The assistant
   needs to be talking to the Rhino you're porting *to*, so it can load and
   test the built plugin there.
@@ -59,7 +60,7 @@ you'll probably also want GH2 equivalents. See
   Grasshopper2 versions the assistant picked match what you actually want
   to target, not just the latest pre-release it could find.
 - **API substitutions.** Same caveat as for the .NET Core upgrade: a
-  same-signature replacement isn't always a same-behaviour replacement.
+  same-signature replacement isn't always a same-behavior replacement.
 - **Removed features.** If an API was removed rather than renamed, the
   assistant may stub the call out to make the build pass. Search the diff
   for `TODO`, `NotImplementedException`, and commented-out blocks before

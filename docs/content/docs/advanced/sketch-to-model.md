@@ -3,6 +3,7 @@ title: Sketch to model
 linkTitle: Sketch to model
 weight: 4
 author: Callum
+editor: SteveF
 keywords:
   - sketch to model
   - image to geometry
@@ -23,7 +24,7 @@ it.
 ## What you need
 
 - An MCP-connected assistant that can accept images
-  ([Claude Code](../docs/cc-plugin), Claude Desktop, or similar).
+  ([Claude Code](../getting-started/cc-plugin), Claude Desktop, or similar).
 - **Rhino** running with Rhino MCP, ideally on Rhino 9 if you want the
   result as GH2.
 - A reasonably legible image of the sketch. Phone photo is fine;

@@ -2,7 +2,9 @@
 title: Upgrade a plugin to .NET Core
 linkTitle: Upgrade to .NET Core
 weight: 1
+prev: docs/developers
 author: Callum
+editor: SteveF
 keywords:
   - .NET Core
   - plugin upgrade
@@ -12,11 +14,11 @@ keywords:
 
 If you have a Rhino plugin still targeting `net48`, you'll want to move it
 to `net7.0` (Rhino 8) or `net8.0` (Rhino 8 recent / Rhino 9). This page
-showcases how you can use the RhinoMCP to facilitate this upgrade.
+showcases how you can use the Rhino MCP to facilitate this upgrade.
 
 ## What you need
 
-- **Claude Code** with the [Rhino MCP plugin](../docs/cc-plugin) installed.
+- **Claude Code** with the [Rhino MCP plugin](../getting-started/cc-plugin) installed.
 - **Rhino** open with Rhino MCP running, on the version you're targeting.
 - Your plugin's source checked out locally, with Claude Code started in
   that repo.
@@ -57,7 +59,7 @@ Things worth looking at before you accept the work:
   match how you want the two TFMs to differ.
 - **Any swapped APIs.** When a `net48`-era RhinoCommon call doesn't exist
   on the newer target, the assistant will pick a replacement. Spot-check
-  the substitutions: same behaviour, not just same signature.
+  the substitutions: same behavior, not just same signature.
 - **Plugin manifest / yak files.** If you ship through yak, the manifest
   and target folders may need updating too.
 
