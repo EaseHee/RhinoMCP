@@ -30,7 +30,7 @@ public class SpawnSlotTool(RhinoManager manager, RhinoCrashReportFinder crashFin
         }
     }
 
-    [McpServerTool(Name = "close_slot", Title = "Close Rhino Slot", Destructive = true)]
+    [McpServerTool(Name = "close_slot", Title = "Close Rhino Slot", ReadOnly = false, Destructive = true)]
     [Description("Close a Rhino slot gracefully. Saves nothing. On success `payload.closed` is true. On failure `error.code` is one of: `slot_not_found` (no slot with that ID is currently running), `cannot_close_adopted` (the slot was a user-started Rhino — the router will not kill it; ask the user to close the Rhino window).")]
     public async Task<string> CloseAsync(
         [Description("Slot ID returned by spawn_slot, or an animal-name slot adopted from a user-started Rhino")]
@@ -60,7 +60,7 @@ public class SpawnSlotTool(RhinoManager manager, RhinoCrashReportFinder crashFin
         }
     }
 
-    [McpServerTool(Name = "list_slots", Title = "List Rhino Slots", ReadOnly = true)]
+    [McpServerTool(Name = "list_slots", Title = "List Rhino Slots", ReadOnly = true, Destructive = false)]
     [Description("List all currently-running Rhino slots managed by this router. Slots whose Rhino has crashed are pruned before returning. User-started Rhinos that have advertised themselves since the last call are adopted into the list. The list lives in `payload` (an array of slot objects).")]
     public string List()
     {
