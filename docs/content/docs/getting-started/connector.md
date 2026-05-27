@@ -22,8 +22,10 @@ keywords:
 
 ## 2. Install the Claude connector
 
-1. Download the latest [Rhino3d connector](https://github.com/mcneel/RhinoMCP/releases/tag/connector-v0.1.0) from the GitHub releases page.
-2. Click `Claude` under "Used in".
+1. Download the `connector.mcpb` file from the latest [Rhino3d connector release](https://github.com/mcneel/RhinoMCP/releases/tag/connector-v0.1.0).
+2. Open Claude Desktop and go to `Settings` &rarr; `Extensions` &rarr; `Advanced settings`.
+3. Click `Install Extension` and select the downloaded `connector.mcpb`.
+4. Click `Install` to confirm.
 
 That's it. The connector is now wired up.
 
