@@ -134,6 +134,10 @@
   <Target Name="BundleAspNetCoreFramework" AfterTargets="Build">
     <PropertyGroup>
       <_DotnetRoot Condition="'$(DOTNET_ROOT)' != ''">$(DOTNET_ROOT)</_DotnetRoot>
+      <!-- Bundle the x64 ASP.NET Core framework: Rhino is x64 and the framework's
+           R2R images are arch-stamped, so an ARM64 build host's copy won't load
+           (BadImageFormatException). On ARM64 hosts x64 sits under dotnet\x64. -->
+      <_DotnetRoot Condition="'$(_DotnetRoot)' == '' AND $([MSBuild]::IsOSPlatform('Windows')) AND Exists('$(ProgramFiles)\dotnet\x64\shared\Microsoft.AspNetCore.App')">$(ProgramFiles)\dotnet\x64</_DotnetRoot>
       <_DotnetRoot Condition="'$(_DotnetRoot)' == '' AND $([MSBuild]::IsOSPlatform('Windows'))">$(ProgramFiles)\dotnet</_DotnetRoot>
       <_DotnetRoot Condition="'$(_DotnetRoot)' == ''">/usr/local/share/dotnet</_DotnetRoot>
     </PropertyGroup>
