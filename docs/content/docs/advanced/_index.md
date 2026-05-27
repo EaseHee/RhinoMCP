@@ -14,9 +14,7 @@ keywords:
   - workflows
 ---
 
-For users who already know Rhino and Grasshopper and want to get more
-out of the MCP. These pages cover power-user workflows where the
-assistant does the heavy lifting and you stay in review.
+For users who already know Rhino and Grasshopper and want to get more out of the MCP. These pages cover power-user workflows where the assistant does the heavy lifting and you stay in review.
 
 {{< cards >}}
   

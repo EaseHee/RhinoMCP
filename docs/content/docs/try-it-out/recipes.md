@@ -12,10 +12,7 @@ keywords:
   - AI assistant
 ---
 
-A growing library of prompts you can copy straight into your AI assistant.
-Treat them as starting points: tweak the numbers, swap the
-materials, ask follow-up questions. The assistant is conversational; you
-don't have to get the prompt right on the first try.
+A growing library of prompts you can copy straight into your AI assistant. Treat them as starting points: tweak the numbers, swap the materials, ask follow-up questions. The assistant is conversational; you don't have to get the prompt right on the first try.
 
 > **Where to paste these:** any MCP-connected assistant works
 > (Claude Desktop, Claude Code, Cursor). If you haven't set one up yet,

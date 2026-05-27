@@ -12,8 +12,7 @@ keywords:
   - AI assistant
 ---
 
-Welcome! These docs walk you from your first prompt to power-user
-workflows in no time. Pick a starting point below, or jump straight into the sidebar menu.
+Welcome! These docs walk you from your first prompt to power-user workflows in no time. Pick a starting point below, or jump straight into the sidebar menu.
 
 ## Start here
 

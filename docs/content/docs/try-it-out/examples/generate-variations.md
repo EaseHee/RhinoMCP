@@ -10,8 +10,7 @@ keywords:
   - grid
 ---
 
-Sweep across parameters (size, position, color, count) without
-building each variant by hand.
+Sweep across parameters (size, position, color, count) without building each variant by hand.
 
 ## Try this prompt
 
@@ -22,9 +21,7 @@ and color them by height (short = pale, tall = dark).
 
 ## What you should see
 
-A 30-column grid materialises in the viewport. Each column is the right
-height and tinted to match. Ask follow-ups to refine: "space them 1.5m
-apart", "use a 5&times;6 grid", "weight the heights toward the center".
+A 30-column grid materialises in the viewport. Each column is the right height and tinted to match. Ask follow-ups to refine: "space them 1.5m apart", "use a 5&times;6 grid", "weight the heights toward the center".
 
 ## More like this
 

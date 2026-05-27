@@ -14,9 +14,7 @@ keywords:
   - setup
 ---
 
-[Claude Desktop](https://claude.ai/download) is Anthropic's user-friendly chat
-app for Windows and Mac. With our connector installed, anything you ask
-Claude in the chat window can now happen in Rhino & Grasshopper.
+[Claude Desktop](https://claude.ai/download) is Anthropic's user-friendly chat app for Windows and Mac. With our connector installed, anything you ask Claude in the chat window can now happen in Rhino & Grasshopper.
 
 ## 1. Install Claude Desktop
 

@@ -13,9 +13,7 @@ keywords:
 <p style="text-align: center; font-size: 1.25rem; margin: 0 0 2.5rem; opacity: 0.8; font-family: 'Lato', sans-serif; font-weight: 400; font-style: italic;">Talk to Rhino &amp; Grasshopper in plain language</p>
 
 <style>
-  .rh-logo-dark { display: none; }
-  html.dark .rh-logo-light { display: none; }
-  html.dark .rh-logo-dark { display: inline; }
+  .rh-logo-dark { display: none; } html.dark .rh-logo-light { display: none; } html.dark .rh-logo-dark { display: inline; }
 </style>
 
 <h1 style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin: 2.5rem 0 0.5rem;">

@@ -10,8 +10,7 @@ keywords:
   - prompt example
 ---
 
-Describe what you want and let the assistant build it. Good for first
-drafts, study models, and anything where the spec is in your head.
+Describe what you want and let the assistant build it. Good for first drafts, study models, and anything where the spec is in your head.
 
 ## Try this prompt
 
@@ -23,10 +22,7 @@ appropriate materials.
 
 ## What you should see
 
-The assistant will create the slats, legs, and supports in your active
-Rhino window, place them on the right layer, and assign materials. Tweak
-by asking follow-ups: "make the slats 30mm thicker", "splay the
-legs outward".
+The assistant will create the slats, legs, and supports in your active Rhino window, place them on the right layer, and assign materials. Tweak by asking follow-ups: "make the slats 30mm thicker", "splay the legs outward".
 
 ## More like this
 

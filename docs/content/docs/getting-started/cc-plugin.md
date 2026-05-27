@@ -14,21 +14,14 @@ keywords:
   - terminal
 ---
 
-[Claude Code](https://claude.com/claude-code) is Anthropic's
-terminal-based AI assistant. The Rhino Claude Code plugin ships ready-made
-agents for modeling, drafting, Grasshopper, and more.
+[Claude Code](https://claude.com/claude-code) is Anthropic's terminal-based AI assistant. The Rhino Claude Code plugin ships ready-made agents for modeling, drafting, Grasshopper, and more.
 
-Claude Code is a great fit if you're comfortable in a terminal or already
-use it for code. If you're not sure, start with [Claude
-Desktop](../connector). It's much more friendly.
+Claude Code is a great fit if you're comfortable in a terminal or already use it for code. If you're not sure, start with [Claude Desktop](../connector). It's much more friendly.
 
 ## Before you start
 
-1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See
-   [Getting Started](../) if you haven't done that yet.
-2. **Claude Code** is installed and signed in. See the
-   [Claude Code install guide](https://docs.claude.com/claude-code/quickstart)
-   if you need it.
+1. The **Rhino-MCP-Platform** plugin is installed in Rhino. See [Getting Started](../) if you haven't done that yet.
+2. **Claude Code** is installed and signed in. See the [Claude Code install guide](https://docs.claude.com/claude-code/quickstart) if you need it.
 
 ## Install the plugin
 
@@ -39,8 +32,7 @@ Inside a Claude Code session, run:
 /plugin install mcneel@rhino-mcp
 ```
 
-Restart the session when prompted. You'll see a `rhino` MCP server
-appear in your `/mcp` list.
+Restart the session when prompted. You'll see a `rhino` MCP server appear in your `/mcp` list.
 
 ## What you get
 
@@ -58,8 +50,7 @@ Quick actions you can fire off without writing a prompt.
 
 ### Specialist agents
 
-Each agent is tuned for a different kind of work. You can call them
-explicitly (*"have the modeller build me a chair"*) or let Claude pick.
+Each agent is tuned for a different kind of work. You can call them explicitly (*"have the modeller build me a chair"*) or let Claude pick.
 
 | Agent | What it's good at |
 | --- | --- |
@@ -74,8 +65,7 @@ explicitly (*"have the modeller build me a chair"*) or let Claude pick.
 
 ## Try it out
 
-Start a Claude Code session and follow the prompts on the
-[Try it out](../../try-it-out) page.
+Start a Claude Code session and follow the prompts on the [Try it out](../../try-it-out) page.
 
 ## Try the agents
 
@@ -85,8 +75,7 @@ Once that's working, see the specialist agents in action. Ask:
 What's in my Rhino document?
 {{< /prompt >}}
 
-Claude should delegate to `rhino-inspector` and reply with a summary of
-layers, objects, and the viewport.
+Claude should delegate to `rhino-inspector` and reply with a summary of layers, objects, and the viewport.
 
 Then try:
 
@@ -99,8 +88,6 @@ You should see the bench appear in your Rhino window.
 
 ## Tips
 
-- **Agents are colleagues, not commands.** "Hand this off to the
-  Grasshopper scripter" works better than trying to direct every step.
-- **Multiple Rhinos.** Use `/rhino-mcp:launch-rhinos` to spin up several
-  windows and have different agents work in each.
+- **Agents are colleagues, not commands.** "Hand this off to the Grasshopper scripter" works better than trying to direct every step.
+- **Multiple Rhinos.** Use `/rhino-mcp:launch-rhinos` to spin up several windows and have different agents work in each.
 

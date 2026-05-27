@@ -9,9 +9,7 @@ keywords:
   - prompt example
 ---
 
-Get the assistant to wire up a Grasshopper definition for you:
-place components, connect them, set sliders, and solve. You can pick up
-where it left off.
+Get the assistant to wire up a Grasshopper definition for you: place components, connect them, set sliders, and solve. You can pick up where it left off.
 
 ## Try this prompt
 
@@ -23,9 +21,7 @@ slider.
 
 ## What you should see
 
-The assistant opens Grasshopper (if it isn't already), drops in the right
-components, connects them, and solves the canvas. You can grab the
-slider, change values, and watch it update live in Rhino.
+The assistant opens Grasshopper (if it isn't already), drops in the right components, connects them, and solves the canvas. You can grab the slider, change values, and watch it update live in Rhino.
 
 ## More like this
 

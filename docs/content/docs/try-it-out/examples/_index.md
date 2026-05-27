@@ -12,9 +12,7 @@ keywords:
   - walkthroughs
 ---
 
-Short walk-throughs that show what Rhino MCP can do. Each page starts with
-a single prompt you can copy into your assistant, and links out to the
-[Recipes](../recipes) for more variations.
+Short walk-throughs that show what Rhino MCP can do. Each page starts with a single prompt you can copy into your assistant, and links out to the [Recipes](../recipes) for more variations.
 
 {{< cards >}}
   {{< card link="model-from-description" title="Model from a description" subtitle="Turn a sentence into geometry." >}}
