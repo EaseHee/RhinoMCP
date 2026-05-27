@@ -7,65 +7,31 @@
 
 # Rhino MCP Platform
 
-**A Rhino MCP Server for AI Agents to create and edit Rhino.**
+**A Rhino MCP Server for AI Agents to create and edit in Rhino.**
+
+[**Read the docs →**](https://mcneel.github.io/RhinoMCP/docs/)
 
 </div>
 
 ---
 
-# Getting Started
+# Documentation
 
-## Installing
+Full guides live at **[mcneel.github.io/RhinoMCP](https://mcneel.github.io/RhinoMCP/docs/)**:
 
-Rhino MCP Platform can be installed without building source code.
+- [Getting Started](https://mcneel.github.io/RhinoMCP/docs/getting-started/) - Install the plugin and wire up an AI assistant (Claude Desktop, Claude Code, GitHub Copilot, OpenAI Codex, Gemini CLI, or a local model).
+- [Try It Out](https://mcneel.github.io/RhinoMCP/docs/try-it-out/) - Confirm everything works with a first prompt, then browse the recipes and examples.
+- [Advanced](https://mcneel.github.io/RhinoMCP/docs/advanced/) - Advanced workflows
+- [Developers](https://mcneel.github.io/RhinoMCP/docs/developers/) - Use the Rhino MCP in your development cycle.
 
-1. Run `PackageManager` in Rhino
-2. Search Rhino-MCP-Platform
-3. Install
-4. Skip to [Using](https://github.com/mcneel/RhinoMCP#using)
+# Quick start
 
-## Building & Debugging
+The fastest path is [Claude Desktop](https://mcneel.github.io/RhinoMCP/docs/getting-started/connector/): install the [Rhino3d connector](https://github.com/mcneel/RhinoMCP/releases/tag/connector-v0.1.0) and let it install the Rhino plugin for you. For other assistants, see [Getting Started](https://mcneel.github.io/RhinoMCP/docs/getting-started/).
 
-Use Run and Debug from within VSCode to build, launch Rhino and start the MCP Server all in one click.
+# Building & Debugging
 
-## Using
-
-1. Open up your AI Agent, in this case we'll use Claude.
-2. Run the MCPConnect command and copy that into your AI Agent
-3. You may need to restart your AI chat session
-4. Close Rhino, or run the MCPStart command
-5. Confirm by asking your agent to create a box in Rhino.
-
-https://github.com/user-attachments/assets/9b1cd938-3995-4eec-ab42-d62bf67b13f2
-
-### Options
-
-The router accepts `--default-version <ver>` (or `-v <ver>`) to pick which installed Rhino to launch. Defaults to `8`; pass `9` for Rhino 9 WIP.
-
-## Issues?
-
-Q: My MCP client can't find the router.
-
-A: Make sure Rhino-MCP-Platform is installed via Rhino's PackageManager, and double-check the path to `rhino-mcp-router` in your MCP client config.
+Use **Run and Debug** from within VSCode to build, launch Rhino, and start the MCP Server all in one click.
 
 # Getting Help
 
-Ask questions, post discussions and ideas to the [Rhino Discourse forums](https://discourse.mcneel.com/c/rhino/artificial-intelligence-rhino/162).
-
-# What can an MCP Server do?
-
-MCP Servers are a new way of controlling your programs. They let you control Rhino but using written human language. You can ask about the model, have your AI agent create things in the model, or organise it for you. The capabilities are endless.
-
-## What can the RhinoMCP Server do?
-
-### Rhino
-- Model 3d geometry given an image
-
-### Grasshopper 1/2
-- Create scripts
-- Upgrade GH1 scripts to 2
-- De-spaghettify scripts
-- Simplify scripts
-
-### Both
-- Create C#/py scripts for you
+Ask questions, post discussions and ideas to the [Rhino Discourse forums](https://discourse.mcneel.com/c/rhino/artificial-intelligence-rhino/162), or [open an issue](https://github.com/mcneel/RhinoMCP/issues).

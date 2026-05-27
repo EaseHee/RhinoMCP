@@ -22,7 +22,7 @@ keywords:
 
 ## 2. Install the Claude connector
 
-1. Download the latest [Rhino3d connector](https://claude.com/connectors/rhino3d) from the Claude connectors page.
+1. Download the latest [Rhino3d connector](https://github.com/mcneel/RhinoMCP/releases/tag/connector-v0.1.0) from the GitHub releases page.
 2. Click `Claude` under "Used in".
 
 That's it. The connector is now wired up.

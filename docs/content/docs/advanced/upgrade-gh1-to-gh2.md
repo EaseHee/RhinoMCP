@@ -12,6 +12,8 @@ keywords:
   - upgrade
 ---
 
+> GH2 is very new and AI agents are not as familiar with it as GH1
+
 Rhino 9 ships Grasshopper 2 alongside Grasshopper 1. If you have a GH1 definition you'd like to upgrade, your AI Agent and the MCP can read your GH1 graph and rebuild it on a GH2 canvas, solving both side-by-side to confirm they match.
 
 This is different from [upgrading a plugin's compiled components](../developers/upgrade-gh1-to-gh2); here you're porting a `.gh` definition, not source code.
@@ -19,7 +21,7 @@ This is different from [upgrading a plugin's compiled components](../developers/
 ## A prompt to start with
 
 {{< prompt >}}
-Using RhinoWIP, open this GH1 script \<path> and rebuild the same definition on a GH2 canvas. Use the same sample inputs on both, solve them, and tell me whether the outputs match. If anything doesn’t have a clean GH2 equivalent, stop and ask before substituting.
+Using RhinoWIP, open this GH1 script \<path> and rebuild the same definition on a GH2 canvas.
 {{< /prompt >}}
 
 ## What you should see
@@ -35,3 +37,15 @@ The assistant opens Rhino 9 WIP, Grasshopper 1 and 2. It will then remake your G
 ## When the assistant gets stuck
 
 If part of the definition can't be cleanly ported, ask for a short "these need human eyes" list at the end instead of stubbed nodes that silently solve to nothing. A flagged gap is more useful than a quiet mismatch.
+
+## A more advanced and accurate prompt
+
+Note : This is _much_ more thorough and will use more tokens.
+
+{{< prompt >}}
+Rebuild this GH1 script \<path> as a working GH2 definition
+
+1. Dump GH1's ground truth — every node's outputs and internal state (incl. Graph Mapper output domains). That's the answer key.
+2. Rebuild with closest-equivalent components; keep a deviation list for anything GH2 does differently. No clean equivalent → ask first.
+3. Validate each node against GH1's recorded values (not your own work). Don't say "matches" until the final output matches end-to-end, to 1e-4, confirmed by a side-by-side render.
+{{< /prompt >}}
