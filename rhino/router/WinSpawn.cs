@@ -62,6 +62,16 @@ internal static class WinSpawn
         var merged = new SortedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
         foreach (DictionaryEntry e in Environment.GetEnvironmentVariables())
             merged[(string)e.Key] = (string)(e.Value ?? "");
+
+        // Empty windir (Claude Desktop's MSIX env) crashes Rhino in WPF font-cache init; backfill from
+        // SystemDirectory, which (unlike GetFolderPath(Windows)) survives a process born with windir unset.
+        string winDir = Path.GetDirectoryName(Environment.SystemDirectory) ?? "";
+        if (!string.IsNullOrEmpty(winDir))
+        {
+            if (!merged.TryGetValue("windir", out var w) || string.IsNullOrEmpty(w)) merged["windir"] = winDir;
+            if (!merged.TryGetValue("SystemRoot", out var s) || string.IsNullOrEmpty(s)) merged["SystemRoot"] = winDir;
+        }
+
         foreach (var kv in overrides)
             merged[kv.Key] = kv.Value;
 
